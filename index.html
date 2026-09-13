@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Atelier — Luxury Cake Design Assistant & Pastry Architecture</title>
+  <meta name="description" content="AI-assisted patisserie concierge and pastry engineering platform. Bridging bespoke aesthetic inspiration with structural bakery blueprints, portion precision, and allergen safety.">
+  
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ANIMATED ENTRY SPLASH SCREEN
+       ========================================================================== -->
+  <aside class="entry-splash" id="entry-splash" aria-label="Welcome to L'Atelier">
+    <div class="splash-ambient-bg"></div>
+    <div class="splash-particles">
+      <div class="sparkle-dot" style="top:18%; left:22%; width:6px; height:6px;"></div>
+      <div class="sparkle-dot" style="top:32%; right:25%; width:8px; height:8px; animation-delay:0.7s;"></div>
+      <div class="sparkle-dot" style="bottom:26%; left:30%; width:7px; height:7px; animation-delay:1.2s;"></div>
+      <div class="sparkle-dot" style="bottom:38%; right:20%; width:5px; height:5px; animation-delay:0.4s;"></div>
+      <div class="sparkle-dot" style="top:48%; left:12%; width:7px; height:7px; animation-delay:1.5s;"></div>
+    </div>
+
+    <div class="splash-content">
+      <!-- Animated Tier Stacking Assembly -->
+      <div class="splash-cake-assembly">
+        <div class="splash-topper-star">✦</div>
+        <div class="splash-tier splash-tier-3"></div>
+        <div class="splash-tier splash-tier-2"></div>
+        <div class="splash-tier splash-tier-1"></div>
+        <div class="splash-pedestal"></div>
+      </div>
+
+      <div class="splash-badge">Haute Patisserie Architecture</div>
+      <h1 class="splash-title">L'Atelier <span>Design Assistant</span></h1>
+      <p class="splash-subtitle">
+        Where bespoke creative inspiration harmonizes with structural pastry engineering.
+      </p>
+
+      <div class="splash-progress-wrap">
+        <div class="splash-progress-bar" id="splash-progress-bar"></div>
+      </div>
+      <div class="splash-status-text" id="splash-status-text">Calibrating structural doweling formulas...</div>
+
+      <button class="btn splash-enter-btn" id="splash-enter-btn">
+        Enter Atelier Studio ✦
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       STICKY LUXURY NAVIGATION
+       ========================================================================== -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#overview" class="nav-brand">
+          <div class="brand-icon">✦</div>
+          <div>
+            <span>L'Atelier</span>
+            <small style="display:block; font-size:0.65rem; font-family:var(--font-sans); letter-spacing:1px; text-transform:uppercase; color:var(--text-light); font-weight:700;">Cake Assistant</small>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#overview" class="nav-link">Overview</a></li>
+          <li><a href="#user-flow" class="nav-link">User Flow</a></li>
+          <li><a href="#questionnaire" class="nav-link">Questionnaire</a></li>
+          <li><a href="#recommendation" class="nav-link">Recommendation</a></li>
+          <li><a href="#bakers-note" class="nav-link">Baker's Note</a></li>
+          <li><a href="#user-experience" class="nav-link">UX Rationale</a></li>
+          <li><a href="#considerations" class="nav-link">Considerations</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="btn btn-secondary" id="nav-replay-btn" style="padding:0.5rem 1.1rem; font-size:0.82rem;" title="Replay Opening Animation">
+            <span>↺ Replay Intro</span>
+          </button>
+          <a href="#questionnaire" class="btn btn-primary" style="padding:0.6rem 1.4rem; font-size:0.88rem;">
+            Design Your Cake
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">☰</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 1: PROJECT OVERVIEW & HERO
+         ========================================================================== -->
+    <section class="hero section-padding" id="overview">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div class="hero-tag">
+              <span>✦</span> AI-Assisted Patisserie Concierge
+            </div>
+            <h1 class="hero-title">
+              Every Grand Celebration Deserves <span class="highlight">Architectural Perfection</span>
+            </h1>
+            <p class="hero-desc">
+              Bridging the gap between client imagination and structural bakery physics. Our intelligent assistant translates your celebration aesthetic into mathematically precise tier formulas, balanced flavor symphonies, and verifiable bakery blueprints.
+            </p>
+
+            <!-- Natural Language Prompt Intake Bar -->
+            <div class="prompt-bar-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="text" id="hero-prompt-input" placeholder="e.g. 3-tier rustic wildflower wedding cake for 85 guests with lemon elderflower..." aria-label="Natural language cake prompt">
+              <button class="btn btn-primary" id="hero-prompt-submit" style="padding:0.6rem 1.25rem; font-size:0.85rem;">
+                Design
+              </button>
+            </div>
+
+            <!-- Quick Preset Chips -->
+            <div class="prompt-preset-chips">
+              <span class="preset-chip-label">Trending Presets:</span>
+              <button class="preset-chip" data-prompt="3-tier rustic wildflower wedding cake for 85 guests">Wildflower Wedding (85 guests)</button>
+              <button class="preset-chip" data-prompt="2-tier vintage lambeth overpiped birthday cake for 45 guests">Vintage Lambeth (45 guests)</button>
+              <button class="preset-chip" data-prompt="Sculptural dark chocolate mud cake with salted caramel for 60 guests">Dark Ganache Truffle (60 guests)</button>
+              <button class="preset-chip" data-prompt="4-tier couture 24k gold leaf gala cake for 140 guests">Haute 24k Gold (140 guests)</button>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#questionnaire" class="btn btn-primary">
+                <span>Start Interactive Questionnaire</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#bakers-note" class="btn btn-secondary">
+                <span>Inspect Baker Blueprints</span>
+              </a>
+            </div>
+
+            <!-- Atelier Impact Metrics -->
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <div class="metric-val">120<span>+</span></div>
+                <div class="metric-label">Curated Flavor Harmonies</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-val">99.8<span>%</span></div>
+                <div class="metric-label">Structural Transit Reliability</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-val">0<span>%</span></div>
+                <div class="metric-label">Portion Under-Catering</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Interactive Sandbox Card -->
+          <div class="hero-visual-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+              <span class="badge" style="margin:0;">Live Parametric Model</span>
+              <small style="color:var(--accent-gold-hover); font-weight:700;">Scale: 1:10</small>
+            </div>
+
+            <div class="hero-cake-preview" id="dynamic-cake-preview">
+              <div class="cake-topper">🌸</div>
+              <div class="cake-tier tier-top"></div>
+              <div class="cake-tier tier-middle"></div>
+              <div class="cake-tier tier-bottom"></div>
+              <div class="cake-stand"></div>
+            </div>
+
+            <div class="visual-badge">
+              <div>
+                <strong style="display:block; font-size:0.95rem;">Botanical Couture Tier</strong>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Calibrated for 65–85 guests</span>
+              </div>
+              <span class="tag">Structural OK ✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Overview Pillars -->
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🎨</div>
+            <h3 class="pillar-title font-serif">Sensory Aesthetics</h3>
+            <p class="pillar-desc">
+              From Royal Lambeth filigree to modern minimalist concrete finishes, we turn intangible aesthetic visions into tactile, edible artistry.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">📐</div>
+            <h3 class="pillar-title font-serif">Structural Doweling</h3>
+            <p class="pillar-desc">
+              Every multi-tier recommendation calculates tensile center doweling, weight distribution, and base drum thickness to eliminate structural subsidence.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🛡️</div>
+            <h3 class="pillar-title font-serif">Dietary Guardrails</h3>
+            <p class="pillar-desc">
+              Dedicated allergen isolation protocols for celiac-safe gluten-free, vegan emulsions, and nut-safe baker prep areas with zero cross-contamination.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🍽️</div>
+            <h3 class="pillar-title font-serif">Zero-Defect Portions</h3>
+            <p class="pillar-desc">
+              Catering-grade math differentiating between plated 1"×2" Dessert slices and 1"×1" Coffee portions to guarantee zero guest left without cake.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: MAIN USER FLOW PIPELINE
+         ========================================================================== -->
+    <section class="flow-section section-padding" id="user-flow">
+      <div class="container flow-container">
+        <div class="section-header">
+          <span class="badge">Atelier Journey</span>
+          <h2 class="section-title font-serif">The Main <span>User Flow</span></h2>
+          <p class="section-subtitle">
+            An engineered end-to-end workflow guiding clients from initial prompt inspiration all the way to flawless bakery execution. Click any stage to inspect inputs, deliverables, and quality checkpoints.
+          </p>
+        </div>
+
+        <!-- Interactive 5-Step Pipeline -->
+        <div class="flow-track" id="flow-track">
+          <!-- Populated by userflow.js -->
+        </div>
+
+        <!-- Flow Inspector Details Box -->
+        <div class="flow-inspector" id="flow-inspector">
+          <!-- Populated dynamically by userflow.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: FLEXIBLE QUESTIONNAIRE
+         ========================================================================== -->
+    <section class="section-padding" id="questionnaire">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Adaptive Configurator</span>
+          <h2 class="section-title font-serif">The Flexible <span>Questionnaire</span></h2>
+          <p class="section-subtitle">
+            Tailor your bespoke centerpiece. Adjust servings, aesthetic styling, flavor pairings, and dietary guardrails with real-time parametric feedback.
+          </p>
+        </div>
+
+        <div class="wizard-card">
+          <div class="wizard-top-bar">
+            <div class="wizard-progress-info">
+              <span class="step-counter" id="wizard-step-counter">Question 1 of 6</span>
+              <div class="progress-track">
+                <div class="progress-fill" id="wizard-progress-fill"></div>
+              </div>
+            </div>
+            <div style="font-size:0.85rem; color:var(--text-light); font-weight:600;">
+              ✨ Parametric Live Sync Enabled
+            </div>
+          </div>
+
+          <div class="wizard-body">
+            <!-- Question 1: Occasion & Setting -->
+            <div class="wizard-step active" data-step="1">
+              <h3 class="step-prompt font-serif">What milestone or celebration are we designing for?</h3>
+              <p class="step-instruction">Select the primary setting to calibrate visual grandeur and formal serving expectations.</p>
+              
+              <div class="options-grid">
+                <div class="option-card selected" data-value="wedding">
+                  <span class="option-icon">💍</span>
+                  <div class="option-title">Wedding Celebration</div>
+                  <div class="option-desc">Formal multi-tier, high visual impact, ceremonial cutting</div>
+                </div>
+                <div class="option-card" data-value="birthday">
+                  <span class="option-icon">🎂</span>
+                  <div class="option-title">Milestone Birthday</div>
+                  <div class="option-desc">Playful elegance, bold signature flavor profiles</div>
+                </div>
+                <div class="option-card" data-value="gala">
+                  <span class="option-icon">🥂</span>
+                  <div class="option-title">Haute Gala / Corporate</div>
+                  <div class="option-desc">Architectural minimalism, rapid finger-food portioning</div>
+                </div>
+                <div class="option-card" data-value="anniversary">
+                  <span class="option-icon">💎</span>
+                  <div class="option-title">Anniversary Gala</div>
+                  <div class="option-desc">Romantic botanicals, edible gold leaf accents</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2: Guest Count & Servings -->
+            <div class="wizard-step" data-step="2">
+              <h3 class="step-prompt font-serif">How many guests will be celebrating?</h3>
+              <p class="step-instruction">Slide to your expected headcount. Our engine automatically calculates tier diameters and yields.</p>
+              
+              <div class="guest-slider-box">
+                <div class="guest-display">
+                  <span class="guest-number" id="wizard-guest-display">65</span>
+                  <span class="guest-unit">Guests</span>
+                </div>
+                
+                <input type="range" class="slider-input" id="wizard-guest-slider" min="12" max="220" value="65" step="1" aria-label="Guest count range slider">
+                
+                <div style="display:flex; justify-content:center; margin-bottom:1.5rem;">
+                  <div class="tier-auto-hint" id="wizard-tier-hint">
+                    📐 Suggested: 2 Tiers (6" + 8")
+                  </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; text-align:left; background:#FFF; padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-light);">
+                  <div>
+                    <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Plated Dessert Slices (1"×2")</span>
+                    <strong style="display:block; font-size:1.1rem; color:var(--accent-gold-hover);" id="wizard-dessert-portions">65 Slices</strong>
+                  </div>
+                  <div>
+                    <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Cocktail Coffee Slices (1"×1")</span>
+                    <strong style="display:block; font-size:1.1rem; color:var(--accent-gold-hover);" id="wizard-coffee-portions">82 Slices</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3: Aesthetic & Styling -->
+            <div class="wizard-step" data-step="3">
+              <h3 class="step-prompt font-serif">Choose your desired visual aesthetic</h3>
+              <p class="step-instruction">Our patisserie atelier sculpts each design using handcrafted artisanal methods.</p>
+              
+              <div class="options-grid">
+                <div class="option-card selected" data-value="botanical">
+                  <span class="option-icon">🌸</span>
+                  <div class="option-title">Pressed Botanical</div>
+                  <div class="option-desc">Organic edible blooms, delicate pressed ferns, ivory glaze</div>
+                </div>
+                <div class="option-card" data-value="rustic">
+                  <span class="option-icon">🌿</span>
+                  <div class="option-title">Wildflower Semi-Naked</div>
+                  <div class="option-desc">Exposed golden sponge layers, fresh herbs, natural elegance</div>
+                </div>
+                <div class="option-card" data-value="lambeth">
+                  <span class="option-icon">🎀</span>
+                  <div class="option-title">Royal Lambeth Vintage</div>
+                  <div class="option-desc">Intricate Victorian overpiping, ruffled borders, regal decadence</div>
+                </div>
+                <div class="option-card" data-value="gold">
+                  <span class="option-icon">👑</span>
+                  <div class="option-title">24k Gold & Marble</div>
+                  <div class="option-desc">Hand-torn edible gold foil, marble fondant texture, luxury gala</div>
+                </div>
+                <div class="option-card" data-value="minimalist">
+                  <span class="option-icon">🏛️</span>
+                  <div class="option-title">Modern Architectural</div>
+                  <div class="option-desc">Razor-sharp concrete edges, monochromatic ganache monolith</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4: Flavor Symphony -->
+            <div class="wizard-step" data-step="4">
+              <h3 class="step-prompt font-serif">Select your core sponge & flavor palette</h3>
+              <p class="step-instruction">Paired with complimentary moisture soaks, compotes, and whipped silk frostings.</p>
+              
+              <div class="options-grid">
+                <div class="option-card selected" data-value="pistachio">
+                  <span class="option-icon">🥜</span>
+                  <div class="option-title">Pistachio & Rosewater</div>
+                  <div class="option-desc">Bronte pistachio sponge, rose soak, raspberry hibiscus coulis</div>
+                </div>
+                <div class="option-card" data-value="chocolate">
+                  <span class="option-icon">🍫</span>
+                  <div class="option-title">Valrhona Dark Ganache</div>
+                  <div class="option-desc">70% chocolate mud, single-origin espresso, salted dulce de leche</div>
+                </div>
+                <div class="option-card" data-value="lemon">
+                  <span class="option-icon">🍋</span>
+                  <div class="option-title">Meyer Lemon & Elderflower</div>
+                  <div class="option-desc">Zested sponge, St-Germain soak, tangy curd, chamomile dust</div>
+                </div>
+                <div class="option-card" data-value="earlgrey">
+                  <span class="option-icon">☕</span>
+                  <div class="option-title">Earl Grey & Blackberry</div>
+                  <div class="option-desc">Bergamot tea genoise, wildflower honey soak, thyme compote</div>
+                </div>
+                <div class="option-card" data-value="vanilla">
+                  <span class="option-icon">🍦</span>
+                  <div class="option-title">Tahitian Vanilla Pod</div>
+                  <div class="option-desc">Golden bean sponge, pure pod syrup, Mara des Bois preserves</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 5: Dietary Guardrails -->
+            <div class="wizard-step" data-step="5">
+              <h3 class="step-prompt font-serif">Dietary requirements & allergen protocols</h3>
+              <p class="step-instruction">Select all guardrails that apply. We formulate kitchen isolation protocols accordingly.</p>
+              
+              <div class="dietary-grid">
+                <label class="dietary-checkbox">
+                  <input type="checkbox" value="Gluten-Free" aria-label="Gluten-Free">
+                  <div>
+                    <strong style="display:block; font-size:0.95rem;">Gluten-Free Certified</strong>
+                    <span style="font-size:0.8rem; color:var(--text-light);">Almond & rice flour blend, zero wheat contact</span>
+                  </div>
+                </label>
+                <label class="dietary-checkbox">
+                  <input type="checkbox" value="Vegan" aria-label="Vegan">
+                  <div>
+                    <strong style="display:block; font-size:0.95rem;">100% Plant-Based Vegan</strong>
+                    <span style="font-size:0.8rem; color:var(--text-light);">Aquafaba meringue, oat emulsions, dairy-free</span>
+                  </div>
+                </label>
+                <label class="dietary-checkbox">
+                  <input type="checkbox" value="Nut-Free" aria-label="Nut-Free">
+                  <div>
+                    <strong style="display:block; font-size:0.95rem;">Strict Nut-Free Prep</strong>
+                    <span style="font-size:0.8rem; color:var(--text-light);">Zero tree nuts or peanuts in baking environment</span>
+                  </div>
+                </label>
+                <label class="dietary-checkbox">
+                  <input type="checkbox" value="Dairy-Free" aria-label="Dairy-Free">
+                  <div>
+                    <strong style="display:block; font-size:0.95rem;">Dairy-Free Formulation</strong>
+                    <span style="font-size:0.8rem; color:var(--text-light);">Organic coconut cream & plant butter substitutions</span>
+                  </div>
+                </label>
+                <label class="dietary-checkbox">
+                  <input type="checkbox" value="Halal-Friendly" aria-label="Halal-Friendly">
+                  <div>
+                    <strong style="display:block; font-size:0.95rem;">Halal-Friendly Prep</strong>
+                    <span style="font-size:0.8rem; color:var(--text-light);">Zero animal gelatins or non-halal alcohol extracts</span>
+                  </div>
+                </label>
+                <label class="dietary-checkbox">
+                  <input type="checkbox" value="Low-Sugar" aria-label="Low-Sugar">
+                  <div>
+                    <strong style="display:block; font-size:0.95rem;">Reduced Sugar Profile</strong>
+                    <span style="font-size:0.8rem; color:var(--text-light);">Natural fruit reductions with balanced sweetness</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Question 6: Environment & Timeline -->
+            <div class="wizard-step" data-step="6">
+              <h3 class="step-prompt font-serif">Venue environment & production lead time</h3>
+              <p class="step-instruction">Calibrates temperature stability shields and sugar-flower curing schedules.</p>
+              
+              <div class="options-grid">
+                <div class="option-card selected" data-value="standard">
+                  <span class="option-icon">📅</span>
+                  <div class="option-title">Standard Lead Time</div>
+                  <div class="option-desc">3–6 Weeks in advance. Full floral and flavor customization.</div>
+                </div>
+                <div class="option-card" data-value="rush">
+                  <span class="option-icon">⚡</span>
+                  <div class="option-title">Priority Rush Order</div>
+                  <div class="option-desc">&lt; 14 Days. Priority oven scheduling and expedited delivery.</div>
+                </div>
+                <div class="option-card" data-value="advance">
+                  <span class="option-icon">⏳</span>
+                  <div class="option-title">Long-Range Advance</div>
+                  <div class="option-desc">2+ Months. Extended tasting sessions and bespoke sculpting.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wizard Footer Controls -->
+          <div class="wizard-footer">
+            <button class="btn btn-secondary" id="wizard-prev-btn" style="visibility:hidden;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Back</span>
+            </button>
+            <button class="btn btn-primary" id="wizard-next-btn">
+              <span>Continue</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: CAKE RECOMMENDATION ENGINE
+         ========================================================================== -->
+    <section class="section-padding" id="recommendation" style="background:#FFFDF9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Algorithmic Synthesis</span>
+          <h2 class="section-title font-serif">Your Bespoke <span>Cake Recommendation</span></h2>
+          <p class="section-subtitle">
+            Engineered based on your exact questionnaire parameters. Every dimension, dowel placement, and flavor layer is calibrated for high sensory satisfaction and physical stability.
+          </p>
+        </div>
+
+        <!-- Main Recommendation Result Card -->
+        <div class="result-card">
+          <div class="result-media">
+            <span class="match-badge">98% Atelier Match ✓</span>
+            
+            <div class="cake-visual-large" id="result-visual-large">
+              <div class="cake-topper">🌸</div>
+              <div class="cake-tier tier-top" style="width:90px; height:50px; background:linear-gradient(180deg, #FAF7F2, #EDE1D1); border:1px solid #C59B63;"></div>
+              <div class="cake-tier tier-middle" style="width:140px; height:58px; background:linear-gradient(180deg, #FFF, #F3EAE0); border:1px solid #C59B63;"></div>
+              <div class="cake-tier tier-bottom" style="width:190px; height:68px; background:linear-gradient(180deg, #F3EAE0, #E4D5C5); border:1px solid #C59B63;"></div>
+              <div class="cake-stand"></div>
+            </div>
+
+            <div class="palette-swatches" id="rec-swatches">
+              <div class="swatch" style="background:#FAF7F2;"></div>
+              <div class="swatch" style="background:#D6E4D1;"></div>
+              <div class="swatch" style="background:#D98880;"></div>
+              <div class="swatch" style="background:#C59B63;"></div>
+            </div>
+            <small style="font-size:0.75rem; color:var(--text-light); margin-top:0.6rem; text-transform:uppercase; letter-spacing:1px; font-weight:700;">Color Harmony Palette</small>
+          </div>
+
+          <div class="result-details">
+            <div>
+              <div class="result-cat" id="rec-cat">WEDDING • PRESSED BOTANICAL</div>
+              <h3 class="result-title font-serif" id="rec-title">The Pressed Botanical Flora Edition</h3>
+              <p class="result-summary" id="rec-desc">
+                Engineered specifically for your celebration of 65 guests. Featuring our signature Sicilian Pistachio & Wild Rosewater harmony, supported by our central locking dowel matrix.
+              </p>
+
+              <div class="spec-pills">
+                <div class="spec-pill">
+                  <span class="pill-label">Tier Configuration</span>
+                  <div class="pill-val" id="rec-tiers-val">6" + 8" Round</div>
+                </div>
+                <div class="spec-pill">
+                  <span class="pill-label">Portion Yield</span>
+                  <div class="pill-val" id="rec-portions-val">65 Dessert / 82 Coffee</div>
+                </div>
+                <div class="spec-pill">
+                  <span class="pill-label">Estimated Investment</span>
+                  <div class="pill-val" id="rec-price-val" style="color:var(--accent-gold-hover);">$360 – $480</div>
+                </div>
+              </div>
+
+              <div class="flavor-layers">
+                <h4 class="font-serif">Flavor Symphony Composition — <span id="rec-flavor-title" style="color:var(--accent-gold-hover);">Sicilian Pistachio & Wild Rosewater</span></h4>
+                <div class="flavor-layer-list" id="rec-flavor-layers">
+                  <span class="flavor-chip"><strong>Sponge:</strong> Sicilian Bronte Pistachio Sponge</span>
+                  <span class="flavor-chip"><strong>Soak:</strong> Rosewater & Cardamom Simple Syrup</span>
+                  <span class="flavor-chip"><strong>Filling:</strong> Red Raspberry & Hibiscus Coulis</span>
+                  <span class="flavor-chip"><strong>Frosting:</strong> Whipped White Chocolate Buttercream</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="result-actions">
+              <button class="btn btn-primary" id="open-spec-modal-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                <span>View & Print Baker Spec Sheet</span>
+              </button>
+              <a href="#questionnaire" class="btn btn-secondary">
+                <span>Adjust Parameters</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curated Catalog / Gallery -->
+        <div style="margin-top:4rem;">
+          <div class="section-header" style="margin-bottom:2rem;">
+            <span class="badge">Artisanal Gallery</span>
+            <h3 class="font-serif" style="font-size:2rem;">Curated Signature <span>Creations</span></h3>
+            <p style="color:var(--text-muted); font-size:0.95rem;">Browse through peer-reviewed patisserie centerpieces from our seasonal lookbook.</p>
+          </div>
+
+          <div class="catalog-nav">
+            <button class="catalog-filter-btn active" data-filter="all">All Designs</button>
+            <button class="catalog-filter-btn" data-filter="wedding">Weddings</button>
+            <button class="catalog-filter-btn" data-filter="birthday">Birthdays & Galas</button>
+            <button class="catalog-filter-btn" data-filter="floral">Botanicals</button>
+            <button class="catalog-filter-btn" data-filter="chocolate">Decadent Ganache</button>
+          </div>
+
+          <div class="catalog-grid" id="catalog-grid">
+            <!-- Populated dynamically by recommendation.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: BAKER'S NOTE & TECHNICAL BLUEPRINTS
+         ========================================================================== -->
+    <section class="section-padding bakers-note-section" id="bakers-note">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Pastry Engineering Blueprint</span>
+          <h2 class="section-title font-serif">The <span>Baker's Note</span> & Masterclass</h2>
+          <p class="section-subtitle">
+            An indispensable technical handbook for professional pastry chefs, venue staff, and clients. Ensuring mechanical stability, load-bearing doweling, and zero-defect slicing.
+          </p>
+        </div>
+
+        <div class="notes-container">
+          <!-- Sidebar Navigation Tabs -->
+          <div class="notes-tabs">
+            <button class="note-tab-btn active" data-tab="pane-doweling">
+              <span class="tab-icon">📐</span>
+              <div>
+                <strong>Internal Dowel Architecture</strong>
+                <small style="display:block; font-size:0.75rem; color:var(--text-light);">Center rods & weight distribution</small>
+              </div>
+            </button>
+            <button class="note-tab-btn" data-tab="pane-density">
+              <span class="tab-icon">⚖️</span>
+              <div>
+                <strong>Sponge Density Hierarchy</strong>
+                <small style="display:block; font-size:0.75rem; color:var(--text-light);">Load bearing bottom tiers</small>
+              </div>
+            </button>
+            <button class="note-tab-btn" data-tab="pane-damming">
+              <span class="tab-icon">🧈</span>
+              <div>
+                <strong>Moisture Dam Directives</strong>
+                <small style="display:block; font-size:0.75rem; color:var(--text-light);">Preventing fruit curd blowout</small>
+              </div>
+            </button>
+            <button class="note-tab-btn" data-tab="pane-slicing">
+              <span class="tab-icon">🔪</span>
+              <div>
+                <strong>Precision Slicing Calculator</strong>
+                <small style="display:block; font-size:0.75rem; color:var(--text-light);">Portion cutting grid tool</small>
+              </div>
+            </button>
+            <button class="note-tab-btn" data-tab="pane-pairings">
+              <span class="tab-icon">🍯</span>
+              <div>
+                <strong>Flavor Science & Chemistry</strong>
+                <small style="display:block; font-size:0.75rem; color:var(--text-light);">Sugar acid lipid ratios</small>
+              </div>
+            </button>
+          </div>
+
+          <!-- Content Panels -->
+          <div class="notes-content-panel">
+            <!-- Pane 1: Dowel Architecture -->
+            <div class="note-pane active" id="pane-doweling">
+              <h3 class="pane-title font-serif">Internal Doweling & Load-Bearing Physics</h3>
+              <div class="pane-subtitle">Directive #104: Tiered Structural Support</div>
+              <p class="pane-body">
+                Multi-tier celebration cakes are heavy, fragile structures subject to gravitational compression and transport shearing forces. Never place upper tiers directly upon lower cake sponges without rigid mechanical reinforcement.
+              </p>
+
+              <div class="inspector-grid" style="margin-bottom:2rem;">
+                <div class="inspector-box">
+                  <h5>Central Axis Doweling</h5>
+                  <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                    A sharpened food-grade wooden or plastic central dowel must be driven vertically through all upper tiers, penetrating directly into the 12mm bottom masonite baseboard. This prevents horizontal shear during vehicle braking.
+                  </p>
+                </div>
+                <div class="inspector-box">
+                  <h5>Perimeter Support Rods</h5>
+                  <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                    Insert 4 to 8 perimeter dowels in a concentric ring 1.5 inches inward from the tier perimeter. Cut flush with the frosting line using sanitized pruning shears to ensure perfectly level weight transfer.
+                  </p>
+                </div>
+              </div>
+
+              <div style="background:var(--bg-elevated); padding:1.25rem; border-radius:var(--radius-md); border-left:4px solid var(--accent-gold);">
+                <strong style="color:var(--accent-gold-hover); font-size:0.85rem; text-transform:uppercase;">Board Thickness Rule:</strong>
+                <p style="font-size:0.9rem; color:var(--text-main); margin-top:0.25rem;">
+                  Every cake exceeding 2 tiers requires a 12mm heavy-density drum baseboard. Flexible 3mm cardboards flex during lifting, causing catastrophic fondant fissures.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pane 2: Sponge Density Hierarchy -->
+            <div class="note-pane" id="pane-density">
+              <h3 class="pane-title font-serif">Sponge Density & Stacking Hierarchy</h3>
+              <div class="pane-subtitle">Directive #108: Structural Tensile Stacking</div>
+              <p class="pane-body">
+                Different cake batters exhibit vastly differing compressive tensile strengths. A delicate Genoise sponge will collapse if positioned beneath a dense Valrhona chocolate mud tier.
+              </p>
+
+              <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:1.2rem; margin-bottom:2rem;">
+                <div style="background:var(--bg-primary); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-light); text-align:center;">
+                  <span class="badge" style="margin-bottom:0.5rem;">Bottom Tier</span>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.4rem;">High-Density Foundation</h4>
+                  <p style="font-size:0.82rem; color:var(--text-muted);">Mud Cakes, Butter Sponges, Almond Frangipane. Tensile rating: High.</p>
+                </div>
+                <div style="background:var(--bg-primary); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-light); text-align:center;">
+                  <span class="badge" style="margin-bottom:0.5rem;">Middle Tiers</span>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.4rem;">Balanced Crumb</h4>
+                  <p style="font-size:0.82rem; color:var(--text-muted);">Oil-based Velvet, Lemon Zest Cake, Pistachio crumb. Tensile rating: Moderate.</p>
+                </div>
+                <div style="background:var(--bg-primary); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-light); text-align:center;">
+                  <span class="badge" style="margin-bottom:0.5rem;">Crown / Top Tier</span>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.4rem;">Delicate Airy Sponges</h4>
+                  <p style="font-size:0.82rem; color:var(--text-muted);">Genoise, Chiffon, Tea-infused Angel Cake. Tensile rating: Delicate.</p>
+                </div>
+              </div>
+
+              <p style="font-size:0.92rem; color:var(--text-muted);">
+                ✦ <em>Baker's Secret:</em> Always brush hot simple syrup onto warm cake layers to lock in moisture, then chill the layers wrapped in plastic film for 12 hours prior to trimming and torting.
+              </p>
+            </div>
+
+            <!-- Pane 3: Moisture Dam Directives -->
+            <div class="note-pane" id="pane-damming">
+              <h3 class="pane-title font-serif">Moisture Dams & Crumb Coat Protocols</h3>
+              <div class="pane-subtitle">Directive #112: Zero-Blowout Filling Containment</div>
+              <p class="pane-body">
+                Soft fruit curds, salted caramels, and fruit purees have low viscosity. Under the pressure of stacked cake layers, they will migrate outward and bubble through fondant or buttercream unless held by an impermeable perimeter barrier.
+              </p>
+
+              <div class="inspector-grid" style="margin-bottom:2rem;">
+                <div class="inspector-box">
+                  <h5>Double-Ring Buttercream Dam</h5>
+                  <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                    Pipe a firm, cold perimeter dam of stiff Swiss meringue buttercream around each layer at 0.5 inches inside the sponge edge. Pipe two rounds high before ladling inside fillings.
+                  </p>
+                </div>
+                <div class="inspector-box">
+                  <h5>Chilled Crumb Coat Locking</h5>
+                  <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                    Apply a 2mm crumb coat to lock all loose crumbs. Refrigerate at 3°C for at least 45 minutes until the shell is rock-hard before applying the final artistic topcoat.
+                  </p>
+                </div>
+              </div>
+
+              <div style="background:#FFF9F2; border:1.5px solid var(--accent-gold); padding:1.25rem; border-radius:var(--radius-md);">
+                <strong style="color:var(--accent-gold-hover);">Crucial Warning:</strong>
+                <span style="font-size:0.88rem; color:var(--text-main);"> Never use fresh un-cooked strawberries or un-stabilized whipped cream in tiered celebration cakes exceeding 4 hours of ambient display. Water release will dissolve structural integrity.</span>
+              </div>
+            </div>
+
+            <!-- Pane 4: Precision Slicing Calculator -->
+            <div class="note-pane" id="pane-slicing">
+              <h3 class="pane-title font-serif">Precision Portion Slicing Calculator</h3>
+              <div class="pane-subtitle">Catering Tool: Yields for Venue Staff & Event Planners</div>
+              <p class="pane-body">
+                Eliminate catering guesswork. Select cake geometry, diameter, and service style to calculate exact slice count.
+              </p>
+
+              <div class="slicing-calc">
+                <div class="calc-row">
+                  <div class="calc-group">
+                    <label for="calc-shape">Cake Shape</label>
+                    <select class="calc-select" id="calc-shape">
+                      <option value="round" selected>Round Tier (Concentric Cut)</option>
+                      <option value="square">Square Tier (Grid Cut)</option>
+                    </select>
+                  </div>
+                  <div class="calc-group">
+                    <label for="calc-size">Tier Diameter / Width</label>
+                    <select class="calc-select" id="calc-size">
+                      <option value="6">6-inch Tier</option>
+                      <option value="8" selected>8-inch Standard Tier</option>
+                      <option value="10">10-inch Base Tier</option>
+                      <option value="12">12-inch Grand Tier</option>
+                      <option value="14">14-inch Banquet Tier</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="calc-row">
+                  <div class="calc-group">
+                    <label for="calc-portion-style">Portion Cut Style</label>
+                    <select class="calc-select" id="calc-portion-style">
+                      <option value="dessert" selected>Dessert Portion (1" × 2" × 5" — Plated meal)</option>
+                      <option value="coffee">Coffee Portion (1" × 1" × 5" — Cocktail buffet)</option>
+                    </select>
+                  </div>
+                  <div class="calc-result-box">
+                    <div>
+                      <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Calculated Yield</span>
+                      <div class="calc-yield-num" id="calc-yield-val">18 Portions</div>
+                    </div>
+                    <span class="badge" style="margin:0;">Precision Standard</span>
+                  </div>
+                </div>
+
+                <div style="font-size:0.86rem; color:var(--text-muted); padding-top:0.75rem; border-top:1px solid var(--border-light);">
+                  <strong>Recommended Venue Cut Pattern:</strong> <span id="calc-method-val">Inner 4-inch core ring, outer ring sliced into 1-inch wedges</span><br>
+                  <strong>Slice Dimensions:</strong> <span id="calc-dim-val">1" × 2" × 5" (Generous slice — Plated dessert standard)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 5: Flavor Science -->
+            <div class="note-pane" id="pane-pairings">
+              <h3 class="pane-title font-serif">Flavor Chemistry & Equilibrium</h3>
+              <div class="pane-subtitle">Directive #119: Sensory Balance</div>
+              <p class="pane-body">
+                Great patisserie avoids cloying sweetness by pairing rich lipids (buttercream/ganache) with bright acids (passionfruit/lemon curd) and aromatic herbal notes.
+              </p>
+
+              <div class="pairing-matrix">
+                <div class="pairing-card">
+                  <h5 class="font-serif">Fat vs Acid Counterbalance</h5>
+                  <p>Heavy butterfat coats the palate. Introducing passionfruit curd or raspberry hibiscus compote cuts through lipid richness, keeping guest palates refreshed.</p>
+                </div>
+                <div class="pairing-card">
+                  <h5 class="font-serif">The Role of Mineral Salt</h5>
+                  <p>A 0.4% inclusion of Maldon sea salt flakes inside toffees and sponge batters suppresses bitterness and elevates floral aromatics like lavender and elderflower.</p>
+                </div>
+                <div class="pairing-card">
+                  <h5 class="font-serif">Sugar Alcohol Syrups</h5>
+                  <p>Liqueurs (St-Germain, Cointreau, Bourbon) lower water activity, retarding stale starches and preserving optimal sponge crumb softness over a 48-hour event window.</p>
+                </div>
+                <div class="pairing-card">
+                  <h5 class="font-serif">Edible Botanical Safety</h5>
+                  <p>Only organically certified, unsprayed edible flowers (pansies, roses, cornflowers, chamomile) may touch cake frosting. Florist stems must be wrapped in floral tape.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: USER EXPERIENCE (UX) RATIONALE & CASE STUDY
+         ========================================================================== -->
+    <section class="ux-section section-padding" id="user-experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">UX Architecture</span>
+          <h2 class="section-title font-serif">User Experience <span>Breakdown</span></h2>
+          <p class="section-subtitle">
+            Why traditional bespoke cake ordering leads to miscommunication, budget shocks, and structural collapses — and how L'Atelier's UX framework solves each friction point.
+          </p>
+        </div>
+
+        <!-- Comparison Grid -->
+        <div class="comparison-box">
+          <div class="comparison-grid">
+            <!-- Traditional Col -->
+            <div class="comparison-col traditional">
+              <div class="col-header">
+                <span style="font-size:1.8rem;">⚠️</span>
+                <div>
+                  <h4 class="font-serif">Traditional Cake Ordering</h4>
+                  <small style="color:#B91C1C;">Fragmented, Stressful & Unpredictable</small>
+                </div>
+              </div>
+              <ul class="comparison-list">
+                <li>
+                  <span>✕</span>
+                  <div><strong>Vague Pinterest Screenshots:</strong> Client submits images without understanding pricing or tier physics.</div>
+                </li>
+                <li>
+                  <span>✕</span>
+                  <div><strong>Portion Panic:</strong> Guesswork on slice sizes often leaves 20% of wedding guests without dessert.</div>
+                </li>
+                <li>
+                  <span>✕</span>
+                  <div><strong>Hidden Allergen Surprises:</strong> Cross-contamination safety is often an afterthought communicated via chaotic emails.</div>
+                </li>
+                <li>
+                  <span>✕</span>
+                  <div><strong>Weather Catastrophes:</strong> Cakes melt at outdoor marquees because temperature limits were never tested.</div>
+                </li>
+                <li>
+                  <span>✕</span>
+                  <div><strong>Delayed Bakery Quoting:</strong> Days or weeks spent waiting for baker consultations and estimates.</div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Atelier Col -->
+            <div class="comparison-col atelier">
+              <div class="col-header">
+                <span style="font-size:1.8rem;">✦</span>
+                <div>
+                  <h4 class="font-serif">L'Atelier Assisted Experience</h4>
+                  <small style="color:#15803D;">Transparent, Engineered & Stress-Free</small>
+                </div>
+              </div>
+              <ul class="comparison-list">
+                <li>
+                  <span>✓</span>
+                  <div><strong>Instant Parametric Preview:</strong> Live interactive 3D tier visualization responding directly to guest count.</div>
+                </li>
+                <li>
+                  <span>✓</span>
+                  <div><strong>Mathematically Calibrated Slicing:</strong> Differentiates plated dessert vs cocktail finger cuts with zero waste.</div>
+                </li>
+                <li>
+                  <span>✓</span>
+                  <div><strong>Built-In Allergen Guardrails:</strong> Dedicated protocols for gluten-free, vegan, and nut-safe baking.</div>
+                </li>
+                <li>
+                  <span>✓</span>
+                  <div><strong>Ambient Temperature Simulation:</strong> Live warning simulator calculates icing stability based on expected weather.</div>
+                </li>
+                <li>
+                  <span>✓</span>
+                  <div><strong>Print-Ready Baker Blueprint:</strong> Exportable technical spec sheet detailing dowels, recipes, and cutting maps.</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Target Personas -->
+        <div style="margin-bottom:3.5rem;">
+          <h3 class="font-serif" style="font-size:1.8rem; margin-bottom:1.5rem; text-align:center;">Designed for <span>Key Personas</span></h3>
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon">👰</div>
+              <h4 class="pillar-title font-serif">The Anxious Bride</h4>
+              <p class="pillar-desc">
+                Wants aesthetic perfection matching her florals, but terrified of running out of cake or triggering guest peanut allergies.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">📋</div>
+              <h4 class="pillar-title font-serif">The Event Planner</h4>
+              <p class="pillar-desc">
+                Requires rapid budget brackets, exact slice counts for catering staff, and guaranteed on-time transit stability.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">👩‍🍳</div>
+              <h4 class="pillar-title font-serif">The Boutique Baker</h4>
+              <p class="pillar-desc">
+                Needs unambiguous specifications: tier diameters, dowel placement coordinates, and ingredient weights without endless back-and-forth emails.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">🥂</div>
+              <h4 class="pillar-title font-serif">The Gala Host</h4>
+              <p class="pillar-desc">
+                Prioritizes breathtaking editorial grandeur that wows patrons while accommodating diverse international dietary preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Testimonials -->
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "The portion calculator was a lifesaver for our 140-guest wedding in the Cotswolds. The cake arrived rock-solid despite 26°C summer heat, and the pistachio rose flavor had guests raving for weeks!"
+            </p>
+            <div class="test-author">
+              <div class="author-avatar">EG</div>
+              <div>
+                <div class="author-name">Eleanor & George Vance</div>
+                <div class="author-role">Wedding at Highclere Estate</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "As a boutique patisserie owner, the Baker Spec Sheet feature revolutionized our consultation pipeline. Clients come with exact tier math and doweling expectations already aligned. Zero misunderstandings."
+            </p>
+            <div class="test-author">
+              <div class="author-avatar">MC</div>
+              <div>
+                <div class="author-name">Chef Marcus Chen</div>
+                <div class="author-role">Founder, Chen & Co Patisserie</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">
+              "The natural language prompt bar understood exactly what we meant by 'sculptural dark chocolate mud cake with salted caramel for 60 people'. Generated our entire tasting brief in 30 seconds flat!"
+            </p>
+            <div class="test-author">
+              <div class="author-avatar">SR</div>
+              <div>
+                <div class="author-name">Sophia Reynolds</div>
+                <div class="author-role">Creative Director, Vogue Gala</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: IMPORTANT CONSIDERATIONS
+         ========================================================================== -->
+    <section class="section-padding" id="considerations" style="background:#FFFDF9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Critical Safeguards</span>
+          <h2 class="section-title font-serif">Important <span>Considerations</span></h2>
+          <p class="section-subtitle">
+            Essential real-world factors governing celebration cake success. From thermal melting curves to vehicular delivery physics and allergen isolation.
+          </p>
+        </div>
+
+        <!-- 4 Core Hazard Cards -->
+        <div class="considerations-grid">
+          <div class="consider-card">
+            <div class="card-alert-icon icon-temp">🌡️</div>
+            <h4 class="consider-title font-serif">Thermal Thresholds</h4>
+            <p class="consider-desc">
+              Butterfat in Swiss Meringue Buttercream melts at 28°C. Cakes exhibited outdoors in direct sunlight or humid marquees must utilize ganache shells.
+            </p>
+            <div class="safety-check-item">
+              <span>✦</span> Safe threshold: ≤ 22°C ambient
+            </div>
+          </div>
+
+          <div class="consider-card">
+            <div class="card-alert-icon icon-allergen">⚠️</div>
+            <h4 class="consider-title font-serif">Severe Allergen Isolation</h4>
+            <p class="consider-desc">
+              Celiac and severe nut allergies require dedicated sanitized workstations, separate mixer bowls, and certified flour-dust containment.
+            </p>
+            <div class="safety-check-item">
+              <span>✦</span> Cross-contamination zero-tolerance
+            </div>
+          </div>
+
+          <div class="consider-card">
+            <div class="card-alert-icon icon-logistics">🚗</div>
+            <h4 class="consider-title font-serif">Transit & Vehicle Physics</h4>
+            <p class="consider-desc">
+              Never transport cakes on slanted car passenger seats! Place in vehicle passenger footwell on non-slip silicone matting with sub-18°C AC blasting.
+            </p>
+            <div class="safety-check-item">
+              <span>✦</span> Flat footwell placement only
+            </div>
+          </div>
+
+          <div class="consider-card">
+            <div class="card-alert-icon icon-lead">⏳</div>
+            <h4 class="consider-title font-serif">Sugar Flower Curing</h4>
+            <p class="consider-desc">
+              Hand-sculpted gumpaste florals require 7–10 days of moisture evaporation to hold architectural shape in high-humidity summer venues.
+            </p>
+            <div class="safety-check-item">
+              <span>✦</span> Minimum 3-week lead time
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Temperature Risk Simulator -->
+        <div class="temp-simulator-box">
+          <div class="temp-controls">
+            <span class="badge" style="margin-bottom:0.5rem;">Interactive Tool</span>
+            <h3 class="font-serif" style="font-size:1.6rem; margin-bottom:0.5rem;">Ambient Temperature Risk Simulator</h3>
+            <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;">
+              Drag the ambient venue temperature to test structural frosting stability and discover recommended bakery countermeasures.
+            </p>
+
+            <label for="temp-range-input">Expected Venue Temperature:</label>
+            <div class="temp-gauge-display">
+              <span class="temp-degree" id="temp-degree-display">21°C</span>
+              <span class="temp-status-badge" id="temp-status-badge">Optimal Stability</span>
+            </div>
+
+            <input type="range" class="slider-input" id="temp-range-input" min="14" max="36" value="21" step="1" aria-label="Venue temperature range slider">
+            <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-light); font-weight:600;">
+              <span>14°C (Chilled)</span>
+              <span>21°C (Room Temp)</span>
+              <span>28°C (Melting Danger)</span>
+              <span>36°C (Extreme Heat)</span>
+            </div>
+          </div>
+
+          <div class="temp-advice-panel">
+            <h4 class="font-serif" id="temp-status-title">Ideal Pastry Climate</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1rem;" id="temp-status-desc">
+              Buttercream and ganache remain firm and structurally inert. Clean slice cuts and zero slippage.
+            </p>
+            <h5 style="font-size:0.8rem; text-transform:uppercase; color:var(--accent-gold-hover); margin-bottom:0.4rem; letter-spacing:0.8px;">Recommended Directives:</h5>
+            <ul style="list-style:none; font-size:0.86rem; color:var(--text-main); line-height:1.7;" id="temp-advice-list">
+              <li>• Swiss Meringue Buttercream remains at optimal firmness.</li>
+              <li>• Cakes can be displayed for up to 4 hours in shade.</li>
+              <li>• Internal fruit curd dams retain 100% viscosity.</li>
+              <li>• Central dowels maintain tight grip on cardboard tier separators.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+            <span style="color:var(--accent-gold); font-size:1.5rem;">✦</span>
+            <h3 class="font-serif" style="margin:0;">L'Atelier Patisserie</h3>
+          </div>
+          <p class="footer-desc">
+            The world's premier digital concierge for bespoke patisserie design, portion engineering, and structural confectionery consultation.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#overview">Project Overview</a></li>
+            <li><a href="#user-flow">Main User Flow</a></li>
+            <li><a href="#questionnaire">Cake Questionnaire</a></li>
+            <li><a href="#recommendation">Recommendation Engine</a></li>
+            <li><a href="#bakers-note">Baker's Engineering Note</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Technical Directives</h4>
+          <ul class="footer-links">
+            <li><a href="#bakers-note">Doweling Blueprints</a></li>
+            <li><a href="#bakers-note">Precision Slicing Yields</a></li>
+            <li><a href="#considerations">Thermal Melting Sim</a></li>
+            <li><a href="#considerations">Allergen Safety Standards</a></li>
+            <li><a href="#user-experience">UX Case Study</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atelier Concierge</h4>
+          <p style="font-size:0.88rem; color:#A89B91; line-height:1.7; margin-bottom:1rem;">
+            Studio consultations available in Paris, London, and New York. Custom orders require minimum 3-week booking horizon.
+          </p>
+          <span class="badge" style="background:rgba(197, 155, 99, 0.2); color:var(--accent-gold); border-color:var(--accent-gold);">
+            ✦ Certified Master Patisserie
+          </span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 L'Atelier Cake Design Assistant. All rights reserved. Confectionery Architecture System.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="#overview">Privacy Protocol</a>
+          <a href="#overview">Pastry Terms</a>
+          <a href="#overview">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: PRINTABLE BAKER SPECIFICATION SHEET
+       ========================================================================== -->
+  <div class="modal-overlay" id="spec-modal" role="dialog" aria-modal="true" aria-labelledby="modal-spec-title">
+    <div class="modal-content">
+      <button class="modal-close" id="close-spec-modal-btn" aria-label="Close Specification Sheet">✕</button>
+      <div id="modal-spec-body">
+        <!-- Dynamically populated by recommendation.js populateSpecSheetModal() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/userflow.js"></script>
+  <script src="js/baker-calc.js"></script>
+  <script src="js/recommendation.js"></script>
+  <script src="js/questionnaire.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
